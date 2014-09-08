@@ -15,6 +15,7 @@ upminutes=$(( uptime/60%60 ))
 uphours=$(( uptime/60/60%24 ))
 updays=$(( uptime/60/60/24 ))
 
+echo "current uptime:"
 echo "${updays}d ${uphours}h ${upminutes}m" 
 
 if [[ ( $updays -gt $uprecorddays ) || ( $updays -eq $uprecorddays && $uphours -gt $uprecordhours ) || ( $updays -eq $uprecorddays && $uphours -eq $uprecordhours && $upminutes -gt $uprecordminutes ) ]]
