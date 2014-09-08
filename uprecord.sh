@@ -1,12 +1,18 @@
 #!/bin/bash
 
-uprecord=$(<~/.uprecord)
-uprecord=${uprecord%%.*}
-#uprecordseconds=$(( uprecord%60 ))
-uprecordminutes=$(( uprecord/60%60 ))
-uprecordhours=$(( uprecord/60/60%24 ))
-uprecorddays=$(( uprecord/60/60/24 ))
-
+if [ -f ~/.uprecord ] 
+then
+	uprecord=$(<~/.uprecord)
+	uprecord=${uprecord%%.*}
+	#uprecordseconds=$(( uprecord%60 ))
+	uprecordminutes=$(( uprecord/60%60 ))
+	uprecordhours=$(( uprecord/60/60%24 ))
+	uprecorddays=$(( uprecord/60/60/24 ))
+else
+	uprecordminutes=0
+	uprecordhours=0
+	uprecorddays=0
+fi
 
 uptime=$(</proc/uptime)
 uptime=${uptime%%.*}
