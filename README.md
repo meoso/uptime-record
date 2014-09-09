@@ -27,7 +27,7 @@ suggested usage: include in crontab:
 * * * * * ~/scripts/uptime-record/uprecord.sh
 ```
 
-suggested usage: include in conky:
+suggested usage: show in conky:
 ```
 Uptime: $uptime
 Uptime Record: ${execi 60 ~/scripts/uptime-record/show-uprecord.sh}
