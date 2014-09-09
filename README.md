@@ -22,7 +22,7 @@ basic usage: show uptime record:
 ~/scripts/uptime-record/show-uprecord.sh
 ```
     
-suggested usage: include in crontab:
+suggested usage: run in crontab:
 ```
 * * * * * ~/scripts/uptime-record/uprecord.sh
 ```
