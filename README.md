@@ -30,6 +30,6 @@ suggested usage: run in crontab:
 suggested usage: show in conky:
 ```
 Uptime: $uptime
-Uptime Record: ${execi 60 ~/scripts/uptime-record/show-uprecord.sh}
+Uptime Record: ${execi 30 ~/scripts/uptime-record/show-uprecord.sh}
 ```
 
