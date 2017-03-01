@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ -f ~/.uprecord ] 
+if [ -f ~/.uprecord ]
 then
 	uprecord=$(<~/.uprecord)
 	uprecord=${uprecord%%.*}
@@ -22,12 +22,12 @@ uphours=$(( uptime/60/60%24 ))
 updays=$(( uptime/60/60/24 ))
 
 echo "current uptime:"
-echo "${updays}d ${uphours}h ${upminutes}m" 
+echo "${updays}d ${uphours}h ${upminutes}m"
 
 if [[ ( $updays -gt $uprecorddays ) || ( $updays -eq $uprecorddays && $uphours -gt $uprecordhours ) || ( $updays -eq $uprecorddays && $uphours -eq $uprecordhours && $upminutes -gt $uprecordminutes ) ]]
 then
 	echo "new uptime record:"
-	echo "${updays}d ${uphours}h ${upminutes}m" 
+	echo "${updays}d ${uphours}h ${upminutes}m"
 	cat /proc/uptime > ~/.uprecord
 else
 	echo "old record stands:"

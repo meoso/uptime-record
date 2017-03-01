@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ -f ~/.uprecord ] 
+if [ -f ~/.uprecord ]
 then
 	uprecord=$(<~/.uprecord)
 	uprecord=${uprecord%%.*}
